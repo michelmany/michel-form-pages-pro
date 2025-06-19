@@ -29,11 +29,24 @@
            grid-template-columns: 1fr 1fr;
             gap: 50px;
         }
+
+        @media (max-width: 767px) {
+            picture {
+                order: 2;
+            }
+            .hero-screenshot__content {
+                order: 1;
+            }
+        }
     }
 
     &__image {
-        max-width: 240px;
+        max-width: 100%;
         width: 100%;
+
+        @media (min-width: 576px) {
+            max-width: 457px;
+        }
 
         @media (min-width: 768px) {
             max-width: 240px;
