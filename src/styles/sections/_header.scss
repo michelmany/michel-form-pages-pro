@@ -31,6 +31,12 @@
         &-wrapper {
             position: relative;
             z-index: 9;
+
+            &.video-playing {
+                @media (min-width: 1024px) {
+                    height: 540px;
+                }
+            }
         }
 
         &-play-icon {
