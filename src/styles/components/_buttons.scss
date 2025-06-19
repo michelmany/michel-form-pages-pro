@@ -3,8 +3,8 @@
 
 .btn {
     background-color: $primary-text;
-    width: 290px;
-    height: 64px;
+    width: 295px;
+    height: 54px;
     border-radius: 3px;
     border-width: 1px;
     border-style: solid;
@@ -13,10 +13,16 @@
     align-items: center;
     justify-content: center;
     @include lato-font;
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+
+    @media (min-width: 768px) {
+        font-size: 20px;
+        width: 290px;
+        height: 64px;
+    }
 
     &--orange {
         background-color: $orange;
