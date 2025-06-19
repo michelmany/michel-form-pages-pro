@@ -27,7 +27,50 @@
     }
 
     &__video {
-        position: relative;
+
+        &-wrapper {
+            position: relative;
+            z-index: 9;
+        }
+
+        &-play-icon {
+            border: 0;
+            background-color: transparent;
+            position: absolute;
+            top: 49.5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            filter: drop-shadow(0px 5px 25px rgba(0, 0, 0, 0.15));
+            transition: all 0.2s ease-in-out;
+
+            @media (max-width: 575px) {
+                top: 42%;
+            }
+
+
+            img {
+                width: 65px;
+                height: auto;
+
+                @media (min-width: 576px) {
+                    width: 85px;
+                }
+
+                @media (min-width: 768px) {
+                    width: 95px;
+                }
+
+                @media (min-width: 992px) {
+                    width: 124px;
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+                transform: translate(-50%, -50%) scale(1.05);
+                opacity: 0.9;
+            }
+        }
     }
 
     &__video-cover {
