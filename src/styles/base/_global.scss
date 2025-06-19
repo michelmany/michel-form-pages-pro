@@ -6,6 +6,7 @@ body {
     color: $secondary-text;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0.1px;
 }
 
 .container {
@@ -32,3 +33,10 @@ body {
     line-height: 24px;
 }
 
+.shadow-medium {
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.10);
+}
+
+.shadow-large {
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.15);
+}
