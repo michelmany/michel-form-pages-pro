@@ -1,4 +1,5 @@
 @use "../variables" as *;
+@use "../base/mixins" as *;
 
 .testimonials {
     position: relative;
@@ -24,9 +25,9 @@
         }
 
         &-author {
+            @include lato-font;
             color: $hint-text;
             font-size: 14px;
-            font-family: "Lato", sans-serif;
             font-weight: 400;
             line-height: normal;
         }

@@ -1,7 +1,8 @@
 @use "../variables" as *;
+@use "../base/mixins" as *;
 
 body {
-    font-family: 'Lato', sans-serif;
+    @include lato-font;
     line-height: 150%;
     color: $secondary-text;
     -webkit-font-smoothing: antialiased;
@@ -17,7 +18,7 @@ body {
 }
 
 .heading-text {
-    font-family: 'Lato', sans-serif;
+    @include lato-font;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -26,11 +27,15 @@ body {
 }
 
 .body-text {
-    font-family: 'Lato', sans-serif;
+    @include lato-font;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
+}
+
+.shadow-small {
+    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.15);
 }
 
 .shadow-medium {
@@ -39,4 +44,27 @@ body {
 
 .shadow-large {
     box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.15);
+}
+
+.divisor-vertical {
+    width: 1px;
+    padding: 0 53px;
+    position: relative;
+    align-self: stretch;
+    display: none;
+
+    @media (min-width: 1024px) {
+        display: block;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 1px;
+            background-color: rgba(0, 0, 0, 0.1);
+            transform: translateX(-50%);
+        }
+    }
 }

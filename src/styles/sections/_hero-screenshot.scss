@@ -1,7 +1,9 @@
 @use "../variables" as *;
+@use "../base/mixins" as *;
 
 .hero-screenshot {
-    padding-block: 100px;
+    padding-top: 100px;
+    padding-bottom: 98px;
     background-color: $background-light;
 
     .container {
@@ -17,7 +19,7 @@
     }
 
     &__title {
-        font-family: 'Lato', sans-serif;
+        @include lato-font;
         font-size: 32px;
         font-weight: 700;
         line-height: normal;
@@ -26,7 +28,7 @@
     }
 
     &__copy {
-        font-family: 'Lato', sans-serif;
+        @include lato-font;
         color: $secondary-text;
         font-size: 18px;
         font-style: normal;

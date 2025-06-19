@@ -1,4 +1,5 @@
 @use "../variables" as *;
+@use "../base/mixins" as *;
 
 .btn {
     background-color: $primary-text;
@@ -11,7 +12,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Lato', sans-serif;
+    @include lato-font;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -21,18 +22,24 @@
         background-color: $orange;
         border-color: rgba(0, 0, 0, 0.20);
         color: $white;
+
+        @include hover-bg-transition($orange);
     }
 
     &--white {
-        background-color: $background-light;
+        background-color: $white;
         border-color: $border-color;
         color: $secondary-text;
+
+        @include hover-bg-transition($white);
     }
 
     &--gray {
         background-color: $background-light;
-        color: $primary-text;
-        border: 1px solid $primary-text;
+        border-color: $border-color;
+        color: $secondary-text;
+
+        @include hover-bg-transition($white);
     }
 }
 
