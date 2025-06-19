@@ -1,0 +1,38 @@
+@use "../variables" as *;
+
+.btn {
+    background-color: $primary-text;
+    width: 290px;
+    height: 64px;
+    border-radius: 3px;
+    border-width: 1px;
+    border-style: solid;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    &--orange {
+        background-color: $orange;
+        border-color: rgba(0, 0, 0, 0.20);
+        color: $white;
+    }
+
+    &--white {
+        background-color: $background-light;
+        border-color: $border-color;
+        color: $secondary-text;
+    }
+
+    &--gray {
+        background-color: $background-light;
+        color: $primary-text;
+        border: 1px solid $primary-text;
+    }
+}
+

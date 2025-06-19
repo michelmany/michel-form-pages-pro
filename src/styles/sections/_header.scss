@@ -1,0 +1,43 @@
+@use "../variables" as *;
+
+.header {
+    background-color: $background-light;
+    padding-top: 50px;
+
+    @media (min-width: 1024px) {
+        height: 660px;
+    }
+
+    &__logo {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    &__description {
+        color: $secondary-text;
+        font-family: 'Lato', sans-serif;
+        text-align: center;
+        max-width: 626px;
+        margin: 0 auto 40px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        opacity: 0.8;
+    }
+
+    &__video {
+        position: relative;
+        //top: -270px;
+    }
+
+    &__video-cover {
+        max-width: 100%;
+    }
+
+    &__cta-buttons {
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+}

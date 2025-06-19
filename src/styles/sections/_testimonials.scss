@@ -1,0 +1,45 @@
+@use "../variables" as *;
+
+.testimonials {
+    position: relative;
+    background-color: $background-light;
+    padding-block: 100px;
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        align-items: start;
+        margin-bottom: 100px;
+    }
+
+    &__item {
+        padding: 30px;
+        border-radius: 6px;
+        border: 1px solid $border-color;
+        background: $white;
+
+        &-quote {
+            margin-bottom: 15px;
+        }
+
+        &-author {
+            color: $hint-text;
+            font-size: 14px;
+            font-family: "Lato", sans-serif;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        &-bottom {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__cta-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+    }
+}
